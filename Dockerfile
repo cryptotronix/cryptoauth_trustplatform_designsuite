@@ -9,9 +9,6 @@ RUN apt update && apt install -y -q \
 
 RUN pip install hidapi cryptography
 
-WORKDIR /root/cryptoauth_trustplatform_designsuite/assets/dependencies
-RUN git submodule update --init -- cryptoauthlib
-
 WORKDIR /root/cryptoauth_trustplatform_designsuite/assets/dependencies/cryptoauthlib
 RUN mkdir build && \
     cd build && \
